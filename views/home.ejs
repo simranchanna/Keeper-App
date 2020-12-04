@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+<div>
+    <h1><%= kindofDay %></h1>
+    
+    <%todosList.map(item =>{%>
+        <div class="item">
+            <input type="checkbox" >
+            <h3><%= item %></h3>
+        </div>               
+    <%});%>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <input type="text" class="form-control" name="todo">
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+</div>
+
+<%- include('partials/header') %>
