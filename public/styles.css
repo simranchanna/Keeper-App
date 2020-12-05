@@ -1,0 +1,86 @@
+body{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    background-color: #eee;
+}
+.navbar-brand{
+    font-family: "McLaren", cursive;
+    padding: 10px;
+}
+.heading{
+    font-family: "McLaren", cursive;
+}
+.box{
+    width: 30%;
+    margin: 8% auto;
+    padding: 2% 4%;
+    background-color: #fff;
+    border-radius: 2%;
+    box-shadow: 3px 3px 2px 2px lightgray;
+}
+.box-2{
+    margin: 10% auto;
+}
+hr{
+    background-color: lightgray;
+}
+.date{
+    font-family: "McLaren", cursive;
+    font-weight: bold;
+    padding-top: 30px; 
+    color: #f5ba13;
+}
+.list-box{
+    max-width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+.item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F1F1F1;
+}
+.item:last-child {
+    border-bottom: 0;
+}
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: #f5ba13;
+}
+input[type="checkbox"] {
+    margin: 20px;
+}
+p{
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: gray;
+}
+.submit{
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color:#f5ba13;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+}
+.item-input{
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+}
+.item-input:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #f5ba13;
+}

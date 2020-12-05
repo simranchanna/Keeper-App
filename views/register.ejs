@@ -1,26 +1,20 @@
 <%- include('partials/header') %>
 
-<div>
-    <h1>Register</h1>
+<div class="box">
+    <h1 class="heading">Register</h1>
 
-    <div>
+    <div class="box-2">
         <!-- Makes POST request to /register route -->
         <form action="/register" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="username">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" name="password">
-            </div>
-            <button type="submit" class="btn btn-dark">Register</button>
+              <input type="text" class="form-control" name="name" placeholder="Name" required>
+              <br />
+              <input type="email" class="form-control" name="username" placeholder="Email" required>
+              <br />
+              <input type="password" class="form-control" name="password" placeholder="Password" required>
+              <br />
+            <button type="submit" class="btn btn-dark btn-block btn-lg">Sign Up</button>
           </form>
     </div>
 </div>
 
-<%- include('partials/header') %>
+<%- include('partials/footer') %>
