@@ -5,10 +5,12 @@
 
     <div class="list-box">
     
-    <%todosList.map(item =>{%>
+    <%todosList.map(itemObj =>{%>
         <div class="item">
-            <input type="checkbox" >
-            <p><%= item %></p>
+            <form action="/submit" method="POST">
+                <input name=<%=itemObj._id%> <%if(itemObj.status){%> checked <%}%> onChange="this.form.submit()" type="checkbox" >
+            </form>    
+            <p <%if(itemObj.status){%> class="checked" <%}%>><%= itemObj.item %></p>
         </div>               
     <%});%>
     <form class="item" action="/" method="POST">

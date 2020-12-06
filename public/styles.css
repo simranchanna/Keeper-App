@@ -43,10 +43,7 @@ hr{
     align-items: center;
     border-bottom: 1px solid #F1F1F1;
 }
-.item:last-child {
-    border-bottom: 0;
-}
-input:checked+p {
+.checked{
     text-decoration: line-through;
     text-decoration-color: #f5ba13;
 }

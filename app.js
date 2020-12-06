@@ -28,7 +28,10 @@ const userSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String,
-    list: [String]
+    list: [{
+        status: Boolean,
+        item: String
+    }]
 });
 
 
@@ -115,7 +118,33 @@ app.post("/", (req,res)=>{
         }
         else{
             if(foundUser){
-                foundUser.list.push(todo);
+                var newObj = {
+                    status: false,
+                    item: todo
+                }
+                foundUser.list.push(newObj);
+                foundUser.save(function(){
+                    res.redirect("/");
+                })
+            }
+        }
+    })
+});
+
+app.post("/submit" , (req,res)=>{
+    var idtodo = Object.keys(req.body)[0];
+    console.log(idtodo);
+    User.findById(req.user.id , function(err,foundUser){
+        if(err){
+            console.log(err);
+        }
+        else{
+            if(foundUser){
+                foundUser.list.map(obj =>{
+                    if(obj._id == idtodo ){
+                        obj.status = !obj.status;
+                    }
+                })
                 foundUser.save(function(){
                     res.redirect("/");
                 })
